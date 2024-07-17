@@ -2,8 +2,9 @@
 <suite name="WebTestSuite" verbose="1">
     <test name="VerifyPageTitleTest">
         <classes>
-            <class
-                name="tests.HomePageTest"/>
+            <class name="tests.HomePageTest"/>
+            <class name="tests.LoginPageTest"/>
+            <class name="tests.SubscriptionPageTest"/>
         </classes>
     </test>
 </suite>

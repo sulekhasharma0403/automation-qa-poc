@@ -11,6 +11,7 @@ public class WebDriverSetup {
         System.setProperty("webdriver.chrome.driver","C:\\Users\\sulekhasharma\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--incognito");
+        options.addArguments("--start-maximized");
         boolean headless=ConfigLoader.getBooleanProperty("headless",false);
         if(headless){
             options.addArguments("--headless");
