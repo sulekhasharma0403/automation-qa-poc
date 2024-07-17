@@ -17,13 +17,13 @@ public class HomePageTest extends BaseTest{
         homepage = new HomePage(driver);
     }
 
-    @Test
+    @Test(priority = 1)
     public void verifyPageTitle(){
         String pageTitle = homepage.getPageTitle();
         Assert.assertEquals(pageTitle,"The New York Times International - Breaking News, US News, World News, Videos","Page title doesn't match");
     }
 
-    @Test
+    @Test(priority = 2)
     public void verifyHeadingText(){
         String headingText = homepage.getHeadingText();
         Assert.assertEquals(headingText,"New York Times - Top Stories","Heading text doesn't match");

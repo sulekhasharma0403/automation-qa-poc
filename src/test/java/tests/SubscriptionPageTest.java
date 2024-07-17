@@ -17,12 +17,4 @@ public class SubscriptionPageTest extends BaseTest{
         homepage = new HomePage(driver);
     }
 
-    @Test(priority = 1)
-    public void verifyLoginPageTitle(){
-        loginpage = homepage.clickLoginBtnHomePage();
-        subscriptionPage = loginpage.loginAccount();
-        subscriptionPage.navigationToSubscriptionPage();
-        String pageTitle = subscriptionPage.getPageTitle();
-        Assert.assertEquals(pageTitle,"The New York Times: Digital and Home Delivery Subscriptions","Page title doesn't match");
-    }
 }

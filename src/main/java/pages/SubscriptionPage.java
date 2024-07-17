@@ -14,18 +14,4 @@ public class SubscriptionPage extends BasePage{
     public SubscriptionPage(WebDriver driver){
         super(driver);
     }
-
-    public void navigationToSubscriptionPage(){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(continueWithoutSubscriptionBtnLocator));
-    }
-
-    public HomePage continueWithoutSubscribingClick(){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(continueWithoutSubscriptionBtnLocator));
-        WebElement continueWithoutSubscriptionBtn = driver.findElement(continueWithoutSubscriptionBtnLocator);
-        continueWithoutSubscriptionBtn.click();
-        System.out.println("Clicked Continue Without Subscribing Button");
-        return new HomePage(driver);
-    }
 }
