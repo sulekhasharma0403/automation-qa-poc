@@ -17,13 +17,8 @@ public class BaseTest {
         WebDriverSetup.setupDriver();
         driver = WebDriverSetup.getDriver();
         baseUrl = ConfigLoader.getProperty("baseUrl");
-    }
-
-    @BeforeMethod
-    public void navigateToBaseUrl(){
         driver.get(baseUrl);
     }
-
     @AfterClass
     public void teardown(){
         WebDriverSetup.tearDownDriver();
