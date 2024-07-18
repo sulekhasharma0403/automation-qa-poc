@@ -22,9 +22,7 @@ Properties files for different environments are located in the `src/main/resourc
 ### Browser Configuration
 
 The browser to be used for tests is specified in the properties file.At present there is support for 2 browsers: `edge` and `chrome`:
-
 #### `qa.properties`
-
 ```properties
 browser=chrome
 ```
@@ -99,9 +97,8 @@ All dependencies are managed through Maven and listed in the `pom.xml` file.
 ## Running Tests in Headless Mode
 
 To run tests in headless mode, set the `headless` property to `true` in the environment-specific properties file.
-
+#### `qa.properties`
 ```properties
-# qa.properties
 url=https://example.com
 headless=true
 ```
