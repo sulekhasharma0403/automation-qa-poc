@@ -24,7 +24,6 @@ public class ExcelUtils {
     }
 
     public static Object[][] getExcelData(String filePath, String sheetName) throws IOException{
-        ClassLoader classLoader = ExcelUtils.class.getClassLoader();
         FileInputStream fis = new FileInputStream(filePath);
         Workbook workbook = new XSSFWorkbook(fis);
         Sheet sheet = workbook.getSheet(sheetName);
