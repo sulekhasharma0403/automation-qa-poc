@@ -19,7 +19,15 @@ Properties files for different environments are located in the `src/main/resourc
 
 - `qa.properties`
 - `prod.properties`
+### Browser Configuration
 
+The browser to be used for tests is specified in the properties file.At present there is support for 2 browsers: `edge` and `chrome`:
+
+#### `qa.properties`
+
+```properties
+browser=chrome
+```
 ### Test Data
 
 Test data is stored in an Excel file located at `src/test/resources/testdata.xlsx`.
