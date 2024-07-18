@@ -24,7 +24,6 @@ public class SearchPageTest extends BaseTest{
     }
     @Test(priority = 2,dependsOnMethods = "verifySearchAttribute",dataProvider = "excelDataProvider",dataProviderClass = DataProviders.class)
     public void verifyPageTitle(String term){
-        searchpage = homepage.clickAndEnterSearchButton(term);
         String pageTitle = searchpage.getPageTitle();
         Assert.assertEquals(pageTitle,"The New York Times - Search","Page title doesn't match");
     }
