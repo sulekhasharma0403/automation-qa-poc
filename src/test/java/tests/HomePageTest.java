@@ -28,4 +28,12 @@ public class HomePageTest extends BaseTest{
         String headingText = homepage.getHeadingText();
         Assert.assertEquals(headingText,"New York Times - Top Stories","Heading text doesn't match");
     }
+
+    @Test(priority =3)
+    public void verifyLanguageEdition(){
+        String[] languages ={"US","International","Canada","Spanish","Chinese"};
+        for(String lang : languages){
+            Assert.assertTrue(homepage.languageCheck(lang),"Page might be in a different language");
+        }
+    }
 }

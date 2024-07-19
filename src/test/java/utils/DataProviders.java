@@ -9,7 +9,7 @@ public class DataProviders {
     @DataProvider(name="excelDataProvider")
     public Object[][] excelDataProvider() throws IOException {
         String filePath = ConfigLoader.getProperty("excelFilePath");
-        String sheetName = "searchTerm";
+        String sheetName = ConfigLoader.getProperty("sheetName");
         return ExcelUtils.getExcelData(filePath,sheetName);
     }
 }
